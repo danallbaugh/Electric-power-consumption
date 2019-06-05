@@ -20,7 +20,7 @@ filtered_data <- filter(date_convert, Date == "2007-02-01" | Date == "2007-02-02
 i <- c(3:8)
 filtered_data[,i] <- apply(filtered_data[,i], 2, function(x)as.numeric(as.character(x)))
 
-png("plot3.png")
+png("plot3.png", width=480, height=480)
 plot(filtered_data$Sub_metering_1, type = "l", xaxt = "n", ylab = "Energy sub metering", xlab = "")
 lines(filtered_data$Sub_metering_2, type = "l", col = "red")
 lines(filtered_data$Sub_metering_3, type = "l", col = "blue")

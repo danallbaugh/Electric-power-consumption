@@ -21,7 +21,7 @@ i <- c(3:8)
 filtered_data[,i] <- apply(filtered_data[,i], 2, function(x)as.numeric(as.character(x)))
 
 
-png("plot2.png")
+png("plot2.png", width=480, height=480)
 plot(filtered_data$Global_active_power, type = "l", xaxt = "n", ylab = "Global Active Power (kilowatts)", xlab = "")
 axis(1, at = c(0, count(filtered_data)/2, count(filtered_data)),labels = c("Thu", "Fri", "Sat"))
 dev.off()

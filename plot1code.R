@@ -20,6 +20,6 @@ filtered_data <- filter(date_convert, Date == "2007-02-01" | Date == "2007-02-02
 i <- c(3:8)
 filtered_data[,i] <- apply(filtered_data[,i], 2, function(x)as.numeric(as.character(x)))
 
-png("plot1.png")
+png("plot1.png", width=480, height=480)
 hist(filtered_data$Global_active_power, col="red", xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
 dev.off()

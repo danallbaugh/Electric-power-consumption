@@ -21,7 +21,7 @@ i <- c(3:8)
 filtered_data[,i] <- apply(filtered_data[,i], 2, function(x)as.numeric(as.character(x)))
 
 #plotting
-png("plot4.png")
+png("plot4.png", width=480, height=480)
 par(mfrow=c(2,2))
 
 plot(filtered_data$Global_active_power, type = "l", xaxt = "n", ylab = "Global Active Power", xlab = "")
